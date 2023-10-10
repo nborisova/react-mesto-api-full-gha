@@ -1,0 +1,8 @@
+.popup__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 5;
+  align-items: center;
+}

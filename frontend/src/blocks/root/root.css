@@ -1,0 +1,24 @@
+#root {
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 0 60px;
+  background-color: #000000;
+  box-sizing: border-box;
+}
+
+@media (max-width: 920px) {
+  .root {
+    padding: 0 40px 60px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .root {
+    padding: 0 19px 36px;
+  }
+}

@@ -1,0 +1,13 @@
+.profile__name-and-button {
+  display: flex;
+  gap: 18px;
+}
+
+@media (max-width: 360px) {
+  .profile__name-and-button {
+    gap: 10px;
+    transform: translateX(14px);
+    width: calc(100% - 28px);
+    justify-content: center;
+  }
+}

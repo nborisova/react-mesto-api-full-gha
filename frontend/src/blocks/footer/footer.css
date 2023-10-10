@@ -1,0 +1,25 @@
+.footer {
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+  max-width: 880px;
+  margin: 67px auto 0;
+  
+}
+
+@media (max-width: 920px) {
+  .footer {
+    margin-left: 27px;
+  }
+}
+
+@media (max-width: 660px) {
+  .footer {
+    margin: 48px auto 0;
+    padding-left: 27px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

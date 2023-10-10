@@ -1,0 +1,11 @@
+.profile__edit-button-pen {
+  width: 10px;
+  height: 10px;
+}
+
+@media (max-width: 360px) {
+  .profile__edit-button-pen {
+    width: 7.5px;
+    height: 7.5px;
+  }
+}

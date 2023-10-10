@@ -1,0 +1,9 @@
+.profile__avatar-group {
+position: relative;
+}
+
+@media (max-width: 660px) {
+  .profile__avatar-group {
+    margin: 0 auto 0;
+  }
+}

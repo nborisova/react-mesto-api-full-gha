@@ -1,0 +1,4 @@
+.header__group {
+    display: flex;
+    justify-content: flex-end;
+}

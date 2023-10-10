@@ -1,0 +1,19 @@
+.profile__common {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+@media (max-width: 920px) {
+  .profile__common {
+    margin-left: 27px;
+  }
+}
+
+@media (max-width: 660px) {
+  .profile__common {
+    flex-direction: column;
+    max-width: 282px;
+    gap: 26px;
+  }
+}
