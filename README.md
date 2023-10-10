@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 62.84.121.236
+IP 62.84.121.236
 
 Frontend  https://mesto-nb.nomoredomainsrocks.ru
 
