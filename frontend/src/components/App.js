@@ -13,7 +13,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
 import ProtectedRouteElement from './ProtectedRoute';
-import * as auth from './Auth';
+import * as auth from '../utils/Auth';
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
@@ -26,23 +26,11 @@ function App() {
   const [userEmail, setUserEmail] = React.useState('');
   const navigate = useNavigate();
 
-  const api = new Api({
-    baseUrl: 'https://api.mesto-nb.nomoredomain.nomoredomainsrocks.ru',
-    headers: {
-      authorization: `Bearer ${localStorage.getItem('token')}`,
-      'Content-Type': 'application/json'
-    }
-  });
+  let api = initApi();
 
   React.useEffect(() => {
 
-    api.getUserInfo()
-    .then(userData => setCurrentUser(userData))
-    .catch(err => console.error(err));
-
-    api.getInitialCards()
-    .then(cards => setCards(cards))
-    .catch(err => console.error(err));
+    loadInitialData();
 
     function tokenCheck() {
       if (localStorage.getItem('token')) {
@@ -63,6 +51,26 @@ function App() {
 
     tokenCheck();
   }, []);
+
+  function initApi() {
+    return new Api({
+      baseUrl: 'https://api.mesto-nb.nomoredomain.nomoredomainsrocks.ru',
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json'
+      }
+    })
+  }
+
+  function loadInitialData() {
+    api.getUserInfo()
+    .then(userData => setCurrentUser(userData))
+    .catch(err => console.error(err));
+
+    api.getInitialCards()
+    .then(cards => setCards(cards))
+    .catch(err => console.error(err));
+  }
 
   function handleAddPlaceSubmit({ name, link }) {
     api.addNewCard({ name, link })
@@ -141,6 +149,8 @@ function App() {
   }
 
   function handleLogin(email) {
+    api = initApi();
+    loadInitialData();
     setLoggedIn(true);
     setUserEmail(email);
   }

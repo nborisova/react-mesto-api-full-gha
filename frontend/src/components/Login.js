@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from '../images/header-logo.svg';
 import { Link, useNavigate } from 'react-router-dom';
-import * as auth from './Auth';
+import * as auth from '../utils/Auth';
 
 const Login = ({ handleLogin }) => {
     const [formValue, setFormValue] = useState({
@@ -27,10 +27,10 @@ const Login = ({ handleLogin }) => {
             if (token) {
                 setFormValue({email: '', password: ''});
                 auth.getUserEmail(token)
-                .then(email => handleLogin(email))
                 .then(() => {
                     localStorage.setItem('token', token)
                 })
+                .then(email => handleLogin(email))
                 .then(() => navigate('/', {replace: true}))
                 .catch(err => console.log(err));
             }

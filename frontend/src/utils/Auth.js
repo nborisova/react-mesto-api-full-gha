@@ -1,4 +1,4 @@
-import { checkResponse } from '../utils/Api';
+import { checkResponse } from './Api';
 
 export const BASE_URL = 'https://api.mesto-nb.nomoredomain.nomoredomainsrocks.ru';
 

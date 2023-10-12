@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from '../images/header-logo.svg';
 import { Link, useNavigate } from 'react-router-dom';
-import * as auth from './Auth';
+import * as auth from '../utils/Auth';
 import InfoTooltip from './InfoTooltip';
 
 const Register = () => {
