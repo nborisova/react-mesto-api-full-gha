@@ -27,10 +27,10 @@ const Login = ({ handleLogin }) => {
             if (token) {
                 setFormValue({email: '', password: ''});
                 auth.getUserEmail(token)
-                .then(() => {
-                    localStorage.setItem('token', token)
+                .then(email => {
+                    localStorage.setItem('token', token);
+                    handleLogin(email);
                 })
-                .then(email => handleLogin(email))
                 .then(() => navigate('/', {replace: true}))
                 .catch(err => console.log(err));
             }
