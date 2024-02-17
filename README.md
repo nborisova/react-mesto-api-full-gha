@@ -16,8 +16,10 @@
 
 - JavaScript 
 - React
+- JSX
 - Node.js
 - Express
+- MongoDB
 - Адаптивная верстка по макету из Figma по Pixel Perfect
 - HTML
 - CSS
