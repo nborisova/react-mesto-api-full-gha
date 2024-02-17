@@ -1,10 +1,26 @@
 [![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
 
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
-  
+# Проект "Место"
+Сервис для загрузки фотографий с возможностью их удаления и возможностью ставить лайки. 
 
-Адрес репозитория: https://github.com/nborisova/express-mesto-gha.git
+## Реализованный функционал
+
+- Авторизациия и регистрация пользователей
+- Загрузка фотографий с названием и их удаление
+- Возможность лайкать фотографии
+- Попап-формы для редактирования профиля и добавления изображений
+- Попап для просмотра изображений
+- Валидация всех форм
+
+## Технологии и подходы
+
+- JavaScript 
+- React
+- Node.js
+- Express
+- Адаптивная верстка по макету из Figma по Pixel Perfect
+- HTML
+- CSS
 
 ## Ссылки на проект
 
@@ -13,4 +29,16 @@ IP 62.84.121.236
 Frontend  https://mesto-nb.nomoredomainsrocks.ru
 
 Backend  https://api.mesto-nb.nomoredomain.nomoredomainsrocks.ru
+
+## Разработка 
+
+Для запуска проекта потребуется установка [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) и [MongoDB](https://www.mongodb.com/docs/manual/installation/).
+
+### Frontend
+
+Frontend написан на React. Для установки зависимости запустите команду `npm install` в папке frontend, затем запустите команду `npm run start`
+
+### Backend
+
+Backend написан на Node.js. Для установки зависимости запустите команду `npm install` в папке backend, затем запустите команду `npm run dev`
 
